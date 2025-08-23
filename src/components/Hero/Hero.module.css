@@ -1,0 +1,51 @@
+.hero { 
+    min-height: 100vh; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+}
+.heroContent { 
+    max-width: 1000px; 
+    padding: 1rem; 
+}
+.logoContainer {
+    margin: 0 auto 2rem auto;
+}
+.title { 
+    /* This scales the font between 2.5rem (phone) and 5rem (desktop) */
+    font-size: clamp(2.5rem, 8vw, 5rem); 
+    font-weight: 900; 
+    margin-bottom: 1.5rem; 
+    text-transform: uppercase; 
+}
+.subtitle { 
+    /* This scales the subtitle font */
+    font-size: clamp(1.2rem, 4vw, 1.8rem); 
+    color: var(--text-secondary); 
+    margin-bottom: 2.5rem; 
+    min-height: 60px; /* Use min-height to prevent layout shifts */
+    font-weight: 500; 
+}
+.dateLocation { 
+    font-size: clamp(1rem, 3vw, 1.2rem); 
+    margin-bottom: 3rem; 
+    font-weight: 500; 
+}
+.ctaButton { 
+    padding: 1rem 3rem; 
+    background-color: var(--cyber-glow); 
+    color: var(--cyber-black); 
+    font-family: var(--font-exo2); 
+    font-weight: 700; 
+    /* This scales the button font */
+    font-size: clamp(1rem, 3vw, 1.2rem); 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: all 0.3s; 
+    box-shadow: 0 0 20px var(--cyber-glow); 
+}
+.ctaButton:hover { 
+    transform: scale(1.05); 
+    box-shadow: 0 0 30px var(--cyber-glow); 
+}

@@ -1,0 +1,94 @@
+.passes {
+    text-align: center;
+    background: #050713E6;
+}
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.title {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 800px;
+    margin: 0 auto 4rem auto;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    align-items: stretch; /* Makes cards same height */
+}
+.card {
+    background: var(--bg-dark-gray);
+    padding: 2.5rem 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 246, 255, 0.15);
+}
+.card h3 {
+    font-size: 1.8rem;
+    color: var(--cyber-glow);
+    text-align: center;
+}
+.price {
+    font-size: 3rem;
+    font-weight: 900;
+    margin: 1.5rem 0;
+    text-align: center;
+}
+.price span {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+}
+.cardDescription {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    text-align: center;
+    flex-grow: 1; /* Pushes button to bottom */
+}
+.card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2.5rem;
+    flex-grow: 1; /* Pushes button to bottom */
+}
+.card ul li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+.card ul li::before {
+    content: '✓';
+    color: var(--cyber-glow);
+    position: absolute;
+    left: 0;
+}
+.cta {
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin-top: auto; /* Pushes button to bottom */
+    background: var(--cyber-glow);
+    color: var(--cyber-black);
+    padding: 1rem;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.cta:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px var(--cyber-glow);
+}

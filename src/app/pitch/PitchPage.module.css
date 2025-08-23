@@ -1,0 +1,89 @@
+.hero { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-height: 50vh; background: linear-gradient(to bottom, #050713, #050713E6); }
+.hero h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+.hero p { font-size: 1.5rem; color: var(--text-secondary); }
+.contentSection, .whyAttend, .ctaSection { padding: 4rem 2rem; max-width: 1200px; margin: 0 auto; text-align: center; }
+.contentSection h2 { font-size: 2.5rem; margin-bottom: 1.5rem; }
+.contentSection p { font-size: 1.2rem; line-height: 1.8; color: var(--text-secondary); max-width: 800px; margin: 0 auto; }
+.whyAttend { background: #00000030; }
+.whyAttend h2 { font-size: 2.5rem; margin-bottom: 3rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; text-align: left; }
+.card { background: var(--bg-dark-gray); padding: 2rem; border-radius: 8px; border: 1px solid var(--border-color); }
+.card h3 { font-size: 1.5rem; color: var(--cyber-glow); margin-bottom: 1rem; }
+.card p { color: var(--text-secondary); line-height: 1.6; }
+.ctaSection { border-top: 1px solid var(--border-color); }
+.ctaButton { display: inline-block; margin-top: 1.5rem; padding: 1rem 3rem; background-color: var(--cyber-glow); color: var(--cyber-black); font-family: var(--font-exo2); font-weight: 700; font-size: 1.2rem; border-radius: 5px; transition: all 0.3s; }
+.ctaButton:hover { transform: scale(1.05); }
+.hero { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-height: 50vh; background: linear-gradient(to bottom, #050713, #050713E6); }
+.hero h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+.hero p { font-size: 1.5rem; color: var(--text-secondary); max-width: 600px; }
+.contentSection { padding: 4rem 2rem; max-width: 1200px; margin: 0 auto; text-align: center; }
+.contentSection h2 { font-size: 2.5rem; margin-bottom: 3rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
+.card { background: var(--bg-dark-gray); padding: 2.5rem 2rem; border-radius: 8px; border: 1px solid var(--border-color); text-align: left; }
+.card h3 { font-size: 1.8rem; color: var(--cyber-glow); }
+.price { font-size: 2.8rem; font-weight: 700; margin: 1rem 0 2rem 0; }
+.card ul { list-style: none; padding: 0; }
+.card ul li { margin-bottom: 1rem; padding-left: 1.5rem; position: relative; line-height: 1.5; }
+.card ul li::before { content: '✓'; color: var(--cyber-glow); position: absolute; left: 0; }
+.contact { margin-top: 4rem; font-size: 1.2rem; }
+.contact p { margin-bottom: 1rem; }
+.contact a { color: var(--cyber-glow); font-weight: 700; font-size: 1.5rem; }
+.hero { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-height: 50vh; background: linear-gradient(to bottom, #050713, #050713E6); }
+.hero h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+.hero p { font-size: 1.5rem; color: var(--text-secondary); }
+.contentSection { padding: 4rem 2rem; max-width: 1200px; margin: 0 auto; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+.column h2 { font-size: 2.2rem; color: var(--cyber-glow); margin-bottom: 2rem; }
+.column ul { list-style: none; padding: 0; }
+.column ul li { font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.5rem; color: var(--text-secondary); }
+.column ul li strong { color: var(--text-primary); }
+.ctaSection { text-align: center; margin-top: 4rem; padding-top: 3rem; border-top: 1px solid var(--border-color); }
+.ctaSection h2 { font-size: 2rem; }
+.ctaSection p { color: var(--text-secondary); margin-top: 0.5rem; margin-bottom: 2rem; }
+.ctaButton { display: inline-block; padding: 1rem 3rem; background-color: var(--cyber-glow); color: var(--cyber-black); font-family: var(--font-exo2); font-weight: 700; font-size: 1.2rem; border-radius: 5px; transition: all 0.3s; }
+.ctaButton:hover { transform: scale(1.05); }
+
+@media (max-width: 768px) {
+    .grid { grid-template-columns: 1fr; gap: 3rem; }
+}
+/* Universal styles for page hero sections */
+.hero { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    min-height: 40vh; /* A shorter height for sub-pages */
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.heroOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(5, 7, 19, 0.6);
+    z-index: 1;
+}
+
+.heroContent {
+    position: relative;
+    z-index: 2;
+}
+
+.heroContent h1 { 
+    /* This scales the font between 2.2rem and 3.5rem */
+    font-size: clamp(2.2rem, 6vw, 3.5rem); 
+    margin-bottom: 1rem;
+    color: var(--cyber-glow);
+    text-shadow: 0 0 15px var(--cyber-glow);
+}
+
+.heroContent p { 
+    /* This scales the subtitle font */
+    font-size: clamp(1.1rem, 3vw, 1.5rem); 
+    color: var(--text-primary);
+    max-width: 600px; /* Prevent subtitle from getting too wide */
+}

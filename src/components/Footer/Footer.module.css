@@ -1,0 +1,111 @@
+.footer {
+  position: relative; /* Add this */
+  z-index: 2;         /* Give it a higher z-index than main */
+  background: var(--cyber-black);
+  border-top: 1px solid var(--border-color);
+  padding: 4rem 2rem 2rem 2rem;
+}
+/* Updated Styles for the Download Section */
+.downloadSection {
+    text-align: center;
+    padding-bottom: 3rem;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #333;
+}
+.downloadSection h4 {
+    font-size: 1.5rem; /* Larger heading */
+    color: #fff;
+    margin-bottom: 1rem;
+}
+.downloadSection p {
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto 1.5rem auto; /* Center paragraph and add space below */
+}
+.downloadButton {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--cyber-glow);
+    color: var(--cyber-black);
+    font-family: var(--font-exo2);
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.downloadButton:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px var(--cyber-glow);
+}
+.container { max-width: 1200px; margin: 0 auto; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 3rem; }
+.column h4 { font-size: 1.2rem; color: var(--cyber-glow); margin-bottom: 1rem; }
+.column p, .column a { display: block; color: var(--text-secondary); margin-bottom: 0.5rem; }
+.column a:hover { color: var(--cyber-glow); }
+.bottomBar { text-align: center; color: #666; border-top: 1px solid #333; padding-top: 2rem; font-size: 0.9rem; }
+
+/* New styles for the centered collaboration section */
+.collabContainer {
+    text-align: center;
+    margin: 4rem 0 3rem 0;
+}
+.collabContainer h4 {
+    font-size: 1.2rem;
+    color: var(--cyber-glow);
+    margin-bottom: 2rem; /* Increased space */
+}
+
+/* New Marquee Styles */
+.marqueeContainer {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+}
+
+.marqueeContent {
+    display: flex;
+    width: fit-content;
+    /* This animation is the key to the scrolling effect */
+    animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        /* This moves the content by the width of one full set of logos */
+        transform: translateX(-50%);
+    }
+}
+
+.marqueeContent:hover {
+    animation-play-state: paused; /* Pause the scroll on hover */
+}
+
+.logoItem {
+    width: 300px;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; /* Prevent logos from shrinking */
+}
+.logoItem img {
+    filter: brightness(0.8) grayscale(0.5);
+    transition: filter 0.3s;
+}
+.logoItem:hover img {
+    filter: brightness(1) grayscale(0);
+}
+
+.bottomBar { 
+    text-align: center; 
+    color: #666; 
+    border-top: 1px solid #333; 
+    padding-top: 2rem; 
+    font-size: 0.9rem; 
+}

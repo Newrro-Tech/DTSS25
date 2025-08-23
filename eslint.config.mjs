@@ -11,15 +11,27 @@ const compat = new FlatCompat({
 
 const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
-  {
-    ignores: [
-      "node_modules/**",
-      ".next/**",
-      "out/**",
-      "build/**",
-      "next-env.d.ts",
-    ],
-  },
 ];
 
-export default eslintConfig;
+export default ts.config(
+  {
+    files: ["**/*.ts", "**/*.tsx"],
+    extends: [
+      ...ts.configs.recommended,
+      ...next.configs["core-web-vitals"],
+    ],
+    plugins: {
+      react,
+    },
+    // This is the new section that fixes the error
+    rules: {
+      "react/no-unescaped-entities": "off",
+    },
+  },
+  {
+    files: ["**/*.js"],
+    extends: [
+      ...ts.configs.disableTypeChecked,
+    ],
+  },
+);

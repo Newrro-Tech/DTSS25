@@ -1,0 +1,125 @@
+.sponsors, .exhibit {
+    text-align: center;
+}
+
+.exhibit {
+    background: #050713E6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.card, .feeCard {
+    background: var(--bg-dark-gray);
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    text-align: left;
+}
+
+.card h3 {
+    font-size: 1.8rem;
+    color: var(--cyber-glow);
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0.5rem 0 1.5rem 0;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card ul li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.card ul li::before {
+    content: '✓';
+    color: var(--cyber-glow);
+    position: absolute;
+    left: 0;
+}
+
+.learnMore {
+    margin-top: 3rem;
+}
+.learnMore a {
+    display: inline-block;
+    color: var(--cyber-glow);
+    font-weight: 700;
+    position: relative;
+    font-size: 1.1rem;
+}
+.learnMore a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--cyber-glow);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+.learnMore a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.feeSection {
+    margin-top: 3rem;
+}
+
+.feeCard {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2.5rem;
+}
+
+.feeCard h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta {
+    display: inline-block;
+    margin-top: 2rem;
+    background: var(--cyber-glow);
+    color: var(--cyber-black);
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: transform 0.3s;
+    text-decoration: none;
+}
+
+.cta:hover {
+    transform: scale(1.05);
+}

@@ -1,0 +1,68 @@
+.speakers {
+    text-align: center;
+    background: #050713E6;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+.title {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 800px;
+    margin: 0 auto 4rem auto;
+}
+
+/* This is the new grid style */
+.grid {
+    display: grid;
+    /* This creates a responsive grid that will have up to 4 columns */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: var(--bg-dark-gray);
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 246, 255, 0.15);
+}
+.imageWrapper {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 1.5rem auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--cyber-glow);
+}
+.speakerImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.role {
+    font-family: var(--font-exo2);
+    color: var(--cyber-glow);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+.card h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+.titleOrg {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}

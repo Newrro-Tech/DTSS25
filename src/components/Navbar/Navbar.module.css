@@ -1,0 +1,47 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Changed vertical padding from 1rem to 0.5rem to make it thinner */
+  padding: 0.5rem 2rem; 
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 10%;
+  z-index: 1000;
+  transition: background-color 0.4s, backdrop-filter 0.4s, padding 0.4s; /* Added padding to transition */
+}
+.navbar.scrolled {
+  background-color: rgba(5, 7, 19, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.logoContainer { 
+  z-index: 10;
+  flex-shrink: 0; 
+}
+.logoImg{height: 120px; padding: 10px;}
+.navLinks { display: flex; gap: 2rem; align-items: center; font-family: var(--font-exo2); }
+.navLinks a { transition: color 0.3s, text-shadow 0.3s; }
+.navLinks a:hover { color: var(--cyber-glow); text-shadow: 0 0 8px var(--cyber-glow); }
+
+.activeLink {
+  color: var(--cyber-glow);
+  text-shadow: 0 0 8px var(--cyber-glow);
+}
+
+.registerButton { background-color: var(--cyber-glow); color: var(--cyber-black); padding: 0.5rem 1rem; border-radius: 4px; transition: all 0.3s ease; font-weight: 700; }
+.registerButton:hover { transform: scale(1.05); box-shadow: 0 0 10px var(--cyber-glow); }
+.hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+.hamburger span { display: block; width: 25px; height: 3px; background-color: var(--text-primary); transition: all 0.3s ease-in-out; }
+
+@media (max-width: 768px) {
+  .logoContainer {
+      width: 150px;
+  }
+  .navbar{padding: 0.2rem 0.5rem;}
+  .navLinks { display: none; flex-direction: column; position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background: var(--cyber-black); justify-content: center; align-items: center; font-size: 1.5rem; gap: 3rem; }
+  .navLinks.active { display: flex; }
+  .hamburger { display: flex; z-index: 10; }
+}

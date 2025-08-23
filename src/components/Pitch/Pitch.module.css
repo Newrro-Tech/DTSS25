@@ -1,0 +1,10 @@
+.pitch { text-align: center; }
+.container { max-width: 1200px; margin: 0 auto; }
+.title { font-size: 2.8rem; margin-bottom: 1rem; }
+.subtitle { font-size: 1.2rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto 3rem auto; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; text-align: left; }
+.column h3 { font-size: 1.8rem; margin-bottom: 1.5rem; color: var(--cyber-glow); }
+.column ul { list-style: none; }
+.column ul li { margin-bottom: 1.5rem; line-height: 1.6; }
+.column ul li strong { color: #fff; }
+@media(max-width: 768px) { .grid { grid-template-columns: 1fr; } }

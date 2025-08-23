@@ -1,0 +1,10 @@
+.agenda { text-align: center; }
+.title { font-size: 2.8rem; margin-bottom: 3rem; }
+.agendaGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; max-width: 1400px; margin: 0 auto; }
+.dayColumn h3 { font-size: 2rem; color: var(--cyber-glow); margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 2px solid var(--border-color); }
+.timeline { position: relative; display: flex; flex-direction: column; gap: 1.5rem; }
+.timelineItem { background: var(--bg-dark-gray); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--cyber-glow); text-align: left; transition: transform 0.3s; }
+.timelineItem:hover { transform: scale(1.03); }
+.timelineItem h4 { font-size: 1.3rem; margin-bottom: 0.5rem; color: #fff; }
+.timelineItem p { color: var(--text-secondary); line-height: 1.6; }
+@media (max-width: 900px) { .agendaGrid { grid-template-columns: 1fr; } }

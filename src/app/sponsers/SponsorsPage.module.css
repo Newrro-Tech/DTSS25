@@ -1,0 +1,97 @@
+/* Updated Hero section style */
+.hero { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    min-height: 50vh; 
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* New overlay div style */
+.heroOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(5, 7, 19, 0.6); /* Slightly darker overlay for this image */
+    z-index: 1;
+}
+
+/* New container for the text content */
+.heroContent {
+    position: relative;
+    z-index: 2;
+}
+
+.heroContent h1 { 
+    font-size: 3.5rem; 
+    margin-bottom: 1rem;
+    /* color: var(--cyber-glow);
+    text-shadow: 0 0 15px var(--cyber-glow); */
+}
+
+.heroContent p { 
+    font-size: 1.5rem; 
+    color: var(--text-primary);
+    max-width: 600px;
+}
+
+/* --- Rest of the file remains the same --- */
+.contentSection { padding: 4rem 2rem; max-width: 1200px; margin: 0 auto; text-align: center; }
+.contentSection h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+.subtitle { font-size: 1.2rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto 3rem auto; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; align-items: stretch; }
+.card { background: var(--bg-dark-gray); padding: 2.5rem 2rem; border-radius: 8px; border: 1px solid var(--border-color); text-align: left; display: flex; flex-direction: column; justify-content: space-between; }
+.cardContent { flex-grow: 1; }
+.card h3 { font-size: 1.8rem; color: var(--cyber-glow); }
+.price { font-size: 2.8rem; font-weight: 700; margin: 1rem 0 2rem 0; }
+.card ul { list-style: none; padding: 0; }
+.card ul li { margin-bottom: 1rem; padding-left: 1.5rem; position: relative; line-height: 1.5; }
+.card ul li::before { content: '✓'; color: var(--cyber-glow); position: absolute; left: 0; }
+.ctaButton { display: block; text-align: center; width: 100%; margin-top: 2rem; background: var(--cyber-glow); color: var(--cyber-black); padding: 1rem; border-radius: 5px; font-weight: 700; font-size: 1.1rem; text-decoration: none; transition: transform 0.3s, box-shadow 0.3s; }
+.ctaButton:hover { transform: scale(1.03); box-shadow: 0 0 15px var(--cyber-glow); }
+/* Universal styles for page hero sections */
+.hero { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    min-height: 40vh; /* A shorter height for sub-pages */
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.heroOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(5, 7, 19, 0.6);
+    z-index: 1;
+}
+
+.heroContent {
+    position: relative;
+    z-index: 2;
+}
+
+.heroContent h1 { 
+    /* This scales the font between 2.2rem and 3.5rem */
+    font-size: clamp(2.2rem, 6vw, 3.5rem); 
+    margin-bottom: 1rem;
+    color: var(--cyber-glow);
+    text-shadow: 0 0 15px var(--cyber-glow);
+}
+
+.heroContent p { 
+    /* This scales the subtitle font */
+    font-size: clamp(1.1rem, 3vw, 1.5rem); 
+    color: var(--text-primary);
+    max-width: 600px; /* Prevent subtitle from getting too wide */
+}
