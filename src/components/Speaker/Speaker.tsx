@@ -12,6 +12,13 @@ const speakersData = [
     org: "IIT Madras",
     image: "/images/speakers/Dr_T_Ashok.png",
   },
+  {
+    name: "Mr Gaurav Shrivastav",
+    role: "Distinguished Speaker",
+    title: "Senior Director",
+    org: "NXP Semiconductor",
+    image: "/images/speakers/Mr_Gaurav_Shrivastav.png",
+  },
 ];
 
 const Speakers = () => {

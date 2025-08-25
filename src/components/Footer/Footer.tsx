@@ -8,6 +8,7 @@ const collabLogos = [
   { src: "/images/collaborators/collab-logo-3.png", alt: "Collaborator Logo 3" },
   { src: "/images/collaborators/collab-logo-4.png", alt: "Collaborator Logo 4" },
   { src: "/images/collaborators/collab-logo-5.png", alt: "Collaborator Logo 5" },
+  { src: "/images/collaborators/collab-logo-6.png", alt: "Collaborator Logo 6" }
   // Add as many new logos as you want here
 ];
 
